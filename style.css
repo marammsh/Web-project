@@ -1,17 +1,28 @@
 body {
+    width: 100%;
     margin: 0;
+    padding: 0;
     font-family: Arial, Tahoma, sans-serif;
     background-color: #f4f7f5;
     color: #222;
+    overflow-x: hidden;
 }
 
-.navbar {
+/*.navbar {
     background-color: #0f5132;
     color: white;
     padding: 1rem 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}*/
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
 }
 
 .logo {
@@ -20,7 +31,7 @@ body {
 
 .navbar a,
 .navbar button {
-    color: white;
+    color: #0b6b3a;
     text-decoration: none;
     margin: 0 0.6rem;
     background: none;
@@ -30,27 +41,60 @@ body {
 }
 
 .navbar button {
-    border: 1px solid white;
+    border: 1px solid #0b6b3a;
     border-radius: 20px;
     padding: 0.4rem 0.9rem;
 }
 
-.hero {
+/*.hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: 4rem;
     background: linear-gradient(135deg, #0f5132, #1f7a4d);
     color: white;
+}*/
+
+
+
+.hero-text-section {
+    background: white;
+    margin: 0;
+    color: #0b6b3a;
+    text-align: center;
+    padding: 80px 10%;
 }
 
-.hero-text h1 {
+/*.hero-text h1 {
     font-size: 2.8rem;
+}*/
+
+.hero-text-section h1 {/**/
+    font-size: 55px;
+    margin-bottom: 25px;
 }
 
-.hero-text p {
+
+/*.hero-text p {
     font-size: 1.2rem;
     line-height: 1.9;
+}*/
+
+.hero-text-section p {/**/
+    font-size: 24px;
+    line-height: 2;
+    max-width: 900px;
+    margin: auto;
+}
+
+.night-mode .hero-text-section {
+    background-color: #101828;
+    color: white;
+}
+
+.night-mode .hero-text-section h1,
+.night-mode .hero-text-section p {
+    color: white;
 }
 
 .hero-image img {
@@ -60,10 +104,10 @@ body {
     border-radius: 20px;
 }
 
-.main-btn {
+.hero-btn {
     display: inline-block;
-    background-color: #d4af37;
-    color: #111;
+    background-color:  #0b6b3a /*#d4af37*/;
+    color:  white /*#111*/;
     padding: 0.8rem 1.3rem;
     border-radius: 25px;
     text-decoration: none;
@@ -312,4 +356,76 @@ footer {
 
 .delete-btn {
     background-color: #dc3545;
+}
+
+.video-section {
+    width: 100% !important;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.story-section {
+    width: 85%;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.story-section.reverse .story-image {
+    order: 2;
+}
+
+.story-section.reverse .story-text {
+    order: 1;
+}
+
+.story-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.story-text span {
+    color: #c49a2c;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.story-text h2 {
+    font-size: 42px;
+    margin: 20px 0;
+}
+
+.story-text p {
+    font-size: 20px;
+    line-height: 1.9;
+    color: #333;
+}
+
+.story-text a {
+    display: inline-block;
+    margin-top: 25px;
+    background: #111;
+    color: white;
+    padding: 14px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
 }
