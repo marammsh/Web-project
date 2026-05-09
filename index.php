@@ -24,22 +24,27 @@ include("includes/db.php");
             <button onclick="toggleNightMode()">الوضع الليلي</button>
         </div>
     </nav>
+</header>
 
-    <section class="hero">
-        <div class="hero-text">
+<section class="video-section">
+           <video autoplay muted loop playsinline class="bg-video">
+        <source src="video/saudivideo.mov" type="video/mp4">
+           </video>
+</section>
+
+    <section class="hero-text-section">
             <h1>مرحبًا بك في اكتشف السعودية</h1>
             <p>
                 المملكة العربية السعودية وطن غني بالتاريخ، والثقافة، والطبيعة المتنوعة.
                 يجمع هذا الموقع بين أهم المناطق والمعالم التاريخية والثقافية في المملكة بطريقة تفاعلية.
             </p>
-            <a class="main-btn" href="regions.php">استكشف المناطق</a>
-        </div>
+            <a class="hero-btn" href="regions.php">استكشف المناطق</a>
 
-        <div class="hero-image">
-            <img src="images/saudi.jpg" alt="صورة من المملكة العربية السعودية">
-        </div>
+        <!--<div class="hero-image">
+            <img src="image/saudi.jpg" alt="صورة من المملكة العربية السعودية">
+        </div>-->
+
     </section>
-</header>
 
 <main class="home-content">
 
@@ -51,7 +56,7 @@ include("includes/db.php");
         </p>
     </section>
 
-    <section class="features">
+    <!--<section class="features">
         <div class="feature-card">
             <h3>الثقافة</h3>
             <p>استكشاف العادات والتراث السعودي في مختلف المناطق.</p>
@@ -66,7 +71,43 @@ include("includes/db.php");
             <h3>المناطق</h3>
             <p>تصفح مناطق المملكة بطريقة سهلة وتفاعلية.</p>
         </div>
-    </section>
+    </section>-->
+
+    <section class="story-section">
+    <div class="story-image">
+        <img src="image/culture.jpg" alt="الثقافة السعودية">
+    </div>
+
+    <div class="story-text">
+        <span>الثقافة</span>
+        <h2>التراث السعودي</h2>
+        <p>استكشاف العادات والتراث السعودي في مختلف مناطق المملكة والتعرف على تنوعها الثقافي.</p>
+    </div>
+</section>
+
+<section class="story-section reverse">
+    <div class="story-image">
+        <img src="image/landmark.jpg" alt="المعالم السعودية">
+    </div>
+
+    <div class="story-text">
+        <span>المعالم</span>
+        <h2>وجهات تاريخية وسياحية</h2>
+        <p>عرض أهم المعالم التاريخية والسياحية داخل المملكة العربية السعودية بطريقة جذابة.</p>
+    </div>
+</section>
+
+<section class="story-section">
+    <div class="story-image">
+        <img src="image/areas.jpg" alt="مناطق السعودية">
+    </div>
+
+    <div class="story-text">
+        <span>المناطق</span>
+        <h2>استكشف مناطق المملكة</h2>
+        <p>تصفح مناطق المملكة بطريقة سهلة وتفاعلية من خلال معرض المناطق وصفحات التفاصيل.</p>
+    </div>
+</section>
 
 </main>
 
